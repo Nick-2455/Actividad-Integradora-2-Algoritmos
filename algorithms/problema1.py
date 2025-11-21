@@ -95,7 +95,7 @@ Razon de las complejidades:
     Tiempo: Dominado por la ejecucion del algoritmo de Prim.
     Espacio: Dominado por el almacenamiento de la matriz de adyacencia.
 '''
-def primMain(ArchivoGrafo):
+def resolver_problema1(ArchivoGrafo):
     matrizAdyacencia = leerGrafoDesdeArchivo(ArchivoGrafo)
     totalCosto, aristasMST = prim(matrizAdyacencia)
 
