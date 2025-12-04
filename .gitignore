@@ -1,0 +1,35 @@
+# Ignorar bytecode y caché de Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Ignorar entornos virtuales
+venv/
+.venv/
+env/
+ENV/
+
+# Ignorar configuraciones de editores
+.vscode/
+.idea/
+
+# Ignorar basura de macOS
+.DS_Store
+
+# Ignorar archivos temporales
+*.tmp
+*.temp
+*.bak
+*.swp
+*.swo
+
+# Ignorar archivos de matplotlib/cache
+~/.matplotlib/
+**/matplotlib-*cache*/
+
+# Ignorar archivos grandes de data si existieran
+data/*.csv
+data/*.xlsx
+data/*.png
+data/*.jpg
