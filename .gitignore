@@ -33,3 +33,6 @@ data/*.csv
 data/*.xlsx
 data/*.png
 data/*.jpg
+
+# 
+.pytest_cache/
