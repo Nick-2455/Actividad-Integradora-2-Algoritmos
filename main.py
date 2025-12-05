@@ -22,7 +22,7 @@ def ruta_por_defecto_problema2() -> Path:
     Si aún no tienes carpeta/archivo, puedes crearla después
     o simplemente ignorar el valor por defecto en la ejecución.
     """
-    return BASE_DIR / "data" / "inputsProblema2" / "inputProblema2.txt"
+    return BASE_DIR / "data" / "inputsProblema1" / "inputProblema1.txt"
 
 
 def ruta_por_defecto_problema3() -> Path:
