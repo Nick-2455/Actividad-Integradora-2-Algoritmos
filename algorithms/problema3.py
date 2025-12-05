@@ -1,5 +1,6 @@
 from collections import deque
-from problema1 import leerGrafoDesdeArchivo
+from .problema1 import leerGrafoDesdeArchivo
+
 
 """
 Algoritmo de Edmonds-Karp para calcular el flujo máximo entre dos nodos.

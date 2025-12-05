@@ -10,7 +10,7 @@ a la segunda B, y así sucesivamente.
 
 # Librería para realizar permutaciones al iterar.
 from itertools import permutations
-from problema1 import leerGrafoDesdeArchivo
+from .problema1 import leerGrafoDesdeArchivo
 
 """
 Algoritmo de la ruta más corta hacia el punto de origen.
@@ -80,6 +80,13 @@ def tsp_main(nombre_archivo):
 
     ruta, distancia_min = TSP(grafo)
     print(f"Ruta: {ruta_nums_a_letras(ruta)}\nDistancia mínima: {distancia_min}")
+
+def resolver_problema2(nombre_archivo: str) -> None:
+    """
+    Función principal para el Problema 2.
+    """
+    tsp_main(nombre_archivo)
+
 
 """
 Referencias:
