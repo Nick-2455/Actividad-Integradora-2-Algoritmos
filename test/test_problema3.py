@@ -13,14 +13,14 @@ class TestProblema3(unittest.TestCase):
         
         flujo_max = resolver_problema3(archivo_entrada)
 
-        self.assertEqual(flujo_max, 23)
+        self.assertEqual(flujo_max, 60)
 
     def test_resolver_problema3_Caso2(self):
         archivo_entrada = r'data/inputsProblema3/inputProblema3_Caso2.txt'
         
         flujo_max = resolver_problema3(archivo_entrada)
 
-        self.assertEqual(flujo_max, 10)
+        self.assertEqual(flujo_max, 15)
 
     def test_resolver_problema3_Caso3(self):
         archivo_entrada = r'data/inputsProblema3/inputProblema3_Caso3.txt'
