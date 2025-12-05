@@ -44,6 +44,8 @@ def correr_problema1() -> None:
         ruta = default_path
 
     resolver_problema1(str(ruta))
+    x = input('\n\n')
+    print('\n' * 15)
 
 
 def correr_problema2() -> None:
@@ -57,6 +59,8 @@ def correr_problema2() -> None:
         ruta = default_path
 
     resolver_problema2(str(ruta))
+    x = input('\n\n')
+    print('\n' * 15)
 
 
 def correr_problema3() -> None:
@@ -70,6 +74,8 @@ def correr_problema3() -> None:
         ruta = default_path
 
     resolver_problema3(str(ruta))
+    x = input('\n\n')
+    print('\n' * 15)
 
 
 
