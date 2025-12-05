@@ -10,7 +10,7 @@ a la segunda B, y así sucesivamente.
 
 # Librería para realizar permutaciones al iterar.
 from itertools import permutations
-from problema1 import leerGrafoDesdeArchivo
+from .problema1 import leerGrafoDesdeArchivo
 
 """
 Algoritmo de la ruta más corta hacia el punto de origen.
@@ -78,8 +78,27 @@ def ruta_nums_a_letras(ruta):
 def tsp_main(nombre_archivo):
     grafo = leerGrafoDesdeArchivo(nombre_archivo)
 
+    # Si la función de lectura devuelve una lista de adyacencia (dict
+    # con tuplas (vecino, peso)), convertirla a una matriz de adyacencia
+    # para que TSP trabaje con valores numéricos.
+    if isinstance(grafo, dict):
+        N = len(grafo)
+        # Crear matriz NxN inicializada con 0 (sin arista)
+        matriz = [[0 for _ in range(N)] for _ in range(N)]
+        for i in range(N):
+            for vecino, peso in grafo.get(i, []):
+                matriz[i][vecino] = peso
+        grafo = matriz
+
     ruta, distancia_min = TSP(grafo)
     print(f"Ruta: {ruta_nums_a_letras(ruta)}\nDistancia mínima: {distancia_min}")
+
+def resolver_problema2(nombre_archivo: str) -> None:
+    """
+    Función principal para el Problema 2.
+    """
+    tsp_main(nombre_archivo)
+
 
 """
 Referencias:
