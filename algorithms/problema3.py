@@ -1,6 +1,25 @@
 from collections import deque
 print(">>> CARGANDO problema3.py CORRECTO <<<")
 
+"""
+Algoritmo de Edmonds-Karp para calcular el flujo máximo entre dos nodos.
+
+Parámetros:
+    capacidad: list(list()) -> matriz con las capacidades máximas entre nodos
+    source: int -> nodo inicial
+    sink: int -> nodo final
+
+Retorna:
+    max_flow: int
+
+Complejidades computacionales y sus razones:
+    Tiempo: O(V * E^2)
+        En Edmonds-Karp, cada aumento de flujo usa BFS: O(E).
+        Se realizan a lo más O(E * V) incrementos.
+        Total: O(V * E^2).
+    Espacio: O(V^2)
+        Se almacena la matriz residual y estructuras auxiliares.
+"""
 
 def edmonds_karp(capacidad, source, sink):
     n = len(capacidad)
@@ -25,6 +44,25 @@ def edmonds_karp(capacidad, source, sink):
             nodo = anterior
 
     return max_flow
+
+
+
+"""
+Búsqueda BFS para encontrar un camino aumentante.
+
+Parámetros:
+    residual: list(list()) -> matriz residual
+    padre: list -> para reconstruir el camino
+    source: int
+    sink: int
+
+Retorna:
+    flujo_encontrado: int
+
+Complejidades:
+    Tiempo: O(V + E), donde la matriz se recorre implícitamente.
+    Espacio: O(V) por las estructuras auxiliares.
+"""
 
 def bfs_encontrar_camino(residual, padre, source, sink):
     n = len(residual)
@@ -88,3 +126,8 @@ def resolver_problema3(nombre_archivo):
 
     print(f"Flujo máximo entre {chr(source+65)} y {chr(sink+65)}: {flujo_maximo}")
     return flujo_maximo
+
+
+
+"Referencias:"
+"W3Schools.com. (s. f.). https://www.w3schools.com/dsa/dsa_algo_graphs_edmondskarp.php"
