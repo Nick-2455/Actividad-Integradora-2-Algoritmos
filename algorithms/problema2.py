@@ -26,6 +26,9 @@ Complejidades computacionales y sus razones:
     Espacio: O(n) donde se llenan n direcciones de memoria en arreglos unidimensionales.
 """
 def TSP(grafo):
+    if not grafo:
+        return None, None
+    
     N = len(grafo)
     distancia_min = float("inf")
     ruta_corta = []
@@ -70,10 +73,13 @@ Complejidades computacionales y sus razones:
     Espacio: O(n) donde se crean n direcciones de memoria en un nuevo arreglo.
 """
 def ruta_nums_a_letras(ruta):
-    ruta_letras = []
-    for i in range(len(ruta)):
-        ruta_letras.append(chr(ruta[i] + 65))
-    return ruta_letras
+    if ruta != None:
+        ruta_letras = []
+        for i in range(len(ruta)):
+            ruta_letras.append(chr(ruta[i] + 65))
+        return ruta_letras
+    else:
+        return None
 
 def tsp_main(nombre_archivo):
     grafo = leerGrafoDesdeArchivo(nombre_archivo)
@@ -92,6 +98,8 @@ def tsp_main(nombre_archivo):
 
     ruta, distancia_min = TSP(grafo)
     print(f"Ruta: {ruta_nums_a_letras(ruta)}\nDistancia mínima: {distancia_min}")
+    
+    return ruta, distancia_min
 
 def resolver_problema2(nombre_archivo: str) -> None:
     """
